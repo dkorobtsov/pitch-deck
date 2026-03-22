@@ -1,0 +1,21 @@
+{
+  "name": "dkorobtsov-pitch-deck",
+  "owner": {
+    "name": "Dmitry Korobtsov",
+    "url": "https://github.com/dkorobtsov"
+  },
+  "metadata": {
+    "description": "AI-powered pitch deck creation and audit for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "pitch-deck",
+      "source": "./plugins/pitch-deck",
+      "description": "Create investor-ready pitch decks through structured founder interviews and phased methodology. Includes 7-test audit battery.",
+      "author": {
+        "name": "Dmitry Korobtsov",
+        "url": "https://github.com/dkorobtsov"
+      }
+    }
+  ]
+}

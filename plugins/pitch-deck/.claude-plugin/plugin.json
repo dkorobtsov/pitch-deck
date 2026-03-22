@@ -1,0 +1,10 @@
+{
+  "name": "pitch-deck",
+  "version": "1.0.0",
+  "description": "Create investor-ready pitch decks through structured founder interviews and phased methodology. Includes 7-test audit battery.",
+  "author": {
+    "name": "Dmitry Korobtsov",
+    "url": "https://github.com/dkorobtsov"
+  },
+  "license": "MIT"
+}
