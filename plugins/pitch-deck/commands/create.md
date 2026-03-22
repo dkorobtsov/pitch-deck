@@ -152,8 +152,7 @@ Save to `./pitch/pitch-foundation.md`.
 
 #### Step 2A: 30-Second Commercial
 
-"If Hollywood can tease a 2-hour film in 30 seconds, you can tease a 45-minute meeting." — Eric
-Paley
+If Hollywood can tease a 2-hour film in 30 seconds, you can tease a 45-minute meeting.
 
 Write 3-4 alternative versions. Each must:
 

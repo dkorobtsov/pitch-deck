@@ -179,7 +179,7 @@ All output is written to `./pitch/` relative to your working directory:
 
 ## Credits
 
-Pitching methodology inspired by [Gleb Maltsev](https://www.linkedin.com/in/glebmaltsev/)'s public speaking course and LinkedIn posts. Frameworks from Eric Paley (Founder Collective), Andy Raskin (strategic narrative), Marc Andreessen (risk onion), Hamilton Helmer (7 Powers).
+Pitching methodology inspired by [Gleb Maltsev](https://www.linkedin.com/in/glebmaltsev/)'s public speaking course and LinkedIn posts. Frameworks from Marc Andreessen (risk onion), Hamilton Helmer (7 Powers).
 
 Built by [Dmitry Korobtsov](https://github.com/dkorobtsov).
 
