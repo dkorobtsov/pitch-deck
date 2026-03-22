@@ -1,7 +1,7 @@
 # Pitch Deck Reference — Frameworks and Methodology
 
 Detailed reference material for the pitch-deck skill. Inspired by Gleb Maltsev's public speaking
-course and his observations from 200+ live pitches across a dozen defense-tech events.
+course.
 
 ## The Human Problem
 
