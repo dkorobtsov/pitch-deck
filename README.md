@@ -179,7 +179,7 @@ All output is written to `./pitch/` relative to your working directory:
 
 ## Credits
 
-Methodology synthesized from Eric Paley (Founder Collective), Andy Raskin (strategic narrative), Marc Andreessen (risk onion framework), Hamilton Helmer (7 Powers/moats), and years of pitch coaching.
+Pitching methodology inspired by [Gleb Maltsev](https://www.linkedin.com/in/glebmaltsev/)'s public speaking course and LinkedIn posts. Frameworks from Eric Paley (Founder Collective), Andy Raskin (strategic narrative), Marc Andreessen (risk onion), Hamilton Helmer (7 Powers).
 
 Built by [Dmitry Korobtsov](https://github.com/dkorobtsov).
 
