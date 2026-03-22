@@ -1,0 +1,363 @@
+/* @theme pitch-deck */
+
+/*
+  Minimal pitch deck theme — Apple keynote aesthetic.
+  System fonts, no external dependencies, no branding.
+
+  Slide classes: lead, invert, big-number, quote, comparison, light
+  Layout components (--html): columns, columns-3, metric, steps
+*/
+
+@import "default";
+
+/* ─── Variables ─── */
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --color-bg-dark: #000000;
+  --color-accent: #0071e3;
+  --color-accent-light: rgba(0, 113, 227, 0.08);
+  --color-text: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-text-tertiary: #86868b;
+  --color-border: #d2d2d7;
+  --color-bold: #0071e3;
+  --font-main:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "JetBrains Mono", monospace;
+}
+
+/* ─── Base slide ─── */
+section {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 70px 80px;
+  justify-content: flex-start;
+  letter-spacing: -0.3px;
+}
+
+/* ─── Typography ─── */
+h1 {
+  color: var(--color-text);
+  font-size: 2.6em;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4em;
+  border: none;
+}
+h2 {
+  color: var(--color-text);
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5em;
+  border: none;
+}
+h3 {
+  color: var(--color-text-secondary);
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6em;
+  border: none;
+}
+p {
+  color: var(--color-text-secondary);
+  font-size: 32px;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.3px;
+}
+strong {
+  color: var(--color-bold);
+  font-weight: 600;
+}
+em {
+  color: var(--color-text);
+  font-style: italic;
+}
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+}
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ─── Lists ─── */
+ul,
+ol {
+  margin-left: 0;
+  padding-left: 1.2em;
+}
+li {
+  margin-bottom: 0.4em;
+  color: var(--color-text-secondary);
+  font-size: 105%;
+  line-height: 1.3;
+}
+li::marker {
+  color: var(--color-accent);
+}
+
+/* ─── Blockquote — callout box ─── */
+blockquote {
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 20px 28px;
+  border-radius: 0 12px 12px 0;
+  margin: 1em 0;
+}
+blockquote p {
+  color: var(--color-text) !important;
+  font-size: 1em !important;
+  margin: 0;
+}
+
+/* ─── Tables ─── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+th {
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--color-border);
+}
+td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--color-text-secondary);
+}
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ─── Misc ─── */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--color-border);
+  margin: 1.5em 0;
+}
+img {
+  border-radius: 12px;
+}
+section::after {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+}
+header,
+footer {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+}
+
+/* ═══ SLIDE CLASSES ═══ */
+
+/* Title/closing slide — centered, no pagination */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px;
+  background: var(--color-bg);
+}
+section.lead h1 {
+  font-size: 3.2em;
+  font-weight: 700;
+  margin-bottom: 0.15em;
+  color: var(--color-text);
+}
+section.lead h2 {
+  font-size: 1.2em;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+section.lead p {
+  color: var(--color-text-tertiary);
+  font-size: 0.75em;
+  margin-top: 2.5em;
+}
+section.lead footer,
+section.lead header,
+section.lead::after {
+  display: none;
+}
+
+/* Dark slide — section breaks, dramatic statements */
+section.invert {
+  background: var(--color-bg-dark);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 100px;
+}
+section.invert h1 {
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: 700;
+}
+section.invert h2 {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+section.invert p {
+  color: rgba(255, 255, 255, 0.7);
+}
+section.invert strong {
+  color: var(--color-accent);
+}
+section.invert footer,
+section.invert header,
+section.invert::after {
+  display: none;
+}
+
+/* Single stat/metric hero — h1 is the number, h2 is the label */
+section.big-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.big-number h1 {
+  font-size: 6em;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: 0.05em;
+  letter-spacing: -0.03em;
+}
+section.big-number h2 {
+  font-size: 1.1em;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+/* Customer/expert quote — two blockquotes: quote + attribution */
+section[class~="quote"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 100px;
+  background: var(--color-bg);
+}
+section[class~="quote"] > blockquote {
+  border-left: none !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+section[class~="quote"] > blockquote > p {
+  font-size: 1.7em !important;
+  font-style: italic !important;
+  color: var(--color-text) !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.5px !important;
+}
+section[class~="quote"] > blockquote + blockquote {
+  margin-top: 1.5em !important;
+}
+section[class~="quote"] > blockquote + blockquote > p {
+  font-size: 0.85em !important;
+  font-style: normal !important;
+  color: var(--color-text-tertiary) !important;
+  font-weight: 400 !important;
+}
+
+/* Side-by-side comparison — use with .columns div */
+section.comparison .columns > div:first-child {
+  border-right: 1px solid var(--color-border);
+  padding-right: 40px;
+}
+section.comparison .columns > div:last-child {
+  padding-left: 20px;
+}
+
+/* Alt background — subtle emphasis for screenshots/demos */
+section.light {
+  background: var(--color-bg-alt);
+}
+
+/* ═══ LAYOUT COMPONENTS (requires --html flag) ═══ */
+
+/* Two-column grid */
+section .columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+/* Three-column grid */
+section .columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+/* KPI metric card — first span is number, second is label */
+section .metric {
+  text-align: center;
+  padding: 20px;
+}
+section .metric span:first-child {
+  display: block;
+  font-size: 2.6em;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+section .metric span:last-child {
+  display: block;
+  font-size: 0.7em;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.3em;
+  font-weight: 600;
+}
+/* Timeline / process steps — accent top border cards */
+section .steps {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+section .steps > div {
+  flex: 1;
+  background: var(--color-bg-alt);
+  padding: 28px;
+  border-radius: 16px;
+  border-top: 3px solid var(--color-accent);
+  font-size: 0.85em;
+}
